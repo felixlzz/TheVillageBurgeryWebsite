@@ -8,7 +8,12 @@
          url('../fonts/playfair-display-v30-latin-regular.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
+    min-width: 800px;
     margin:0;
     background-color: black;
     height:100vh;
@@ -19,6 +24,7 @@ body {
 }
 
 header {
+    min-width: 800px;
     width:100%;
     position: fixed;
     background-color:#700000;
@@ -47,7 +53,7 @@ nav a {
 }
 
 nav a:nth-child(1) {
-    background-image: url(img/insta.png);
+    background-image: url(img/insta\ before.png);
     background-size: 70%;
     background-repeat: no-repeat;
     background-position: center;
@@ -55,7 +61,16 @@ nav a:nth-child(1) {
 
 nav a:hover {
     box-shadow: inset 200px 0 0 0 #F2BA57;
-    transition: 700ms ;
+    transition: 600ms ;
+}
+
+nav a:nth-child(1):hover {
+    box-shadow: none;
+    background-image: url(img/insta.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 300ms ;
 }
 
 .container {
@@ -248,4 +263,25 @@ nav a:hover {
 
 .card-group:hover > .little-card:nth-child(7) {
     transform: translate(-240%, 93vh) rotate(-14deg);
+}
+
+h1 {
+    margin:0;
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 70px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+.menu-area {
+    background-image: url();
+    position:relative;
+    margin: 0px;
+    height:70vh;
+    width: 80%;
 }
